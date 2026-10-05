@@ -4,37 +4,1124 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Die Nordsee</title>
+
 <style>
-:root{--bg:#f3f8fb;--card:#fff;--ink:#0b2a3c;--mut:#4d6b7d;--a1:#1d6f9f;--a2:#2fa4a0;--a3:#e9a23b;--a5:#c8553d;--dk:#0b3c5d;--line:#d5e3ec;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#08202e;--card:#0f3146;--ink:#e8f2f7;--mut:#9ab6c6;--line:#1b4660;--dk:#051a27}}
-:root[data-theme="dark"]{--bg:#08202e;--card:#0f3146;--ink:#e8f2f7;--mut:#9ab6c6;--line:#1b4660;--dk:#051a27}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Calibri,sans-serif}
-h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.15;margin:0 0 .5em}
-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;display:flex;gap:.25rem;align-items:center;padding:.6rem 1rem;background:var(--dk);overflow-x:auto;white-space:nowrap}
-nav b{color:#fff;font-family:Georgia,serif;margin-right:auto;padding-right:1rem}
-nav a{color:#cfe3ee;text-decoration:none;padding:.4rem .8rem;border-radius:99px;font-size:.95rem;transition:.25s}
-nav a:hover{background:#ffffff22}
-nav a[aria-current]{background:var(--a2);color:#fff}
-.page{animation:in .6s ease both}
-@keyframes in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-.wrap{max-width:1000px;margin:0 auto;padding:2.5rem 1.25rem}
-.hero{position:relative;background:linear-gradient(#0b3c5d,#1d6f9f);color:#fff;text-align:center;padding:5rem 1.25rem 9rem;overflow:hidden}
-.hero h1{font-size:clamp(2.8rem,9vw,5.5rem);margin:0}
-.hero p{font-size:1.25rem;max-width:34rem;margin:.5rem auto 1.5rem;color:#d8eaf3}
-.btn{display:inline-block;background:var(--a3);color:#1b1200;border:0;padding:.8rem 1.6rem;border-radius:99px;font:600 1rem system-ui;text-decoration:none;cursor:pointer;transition:transform .2s}
-.btn:hover{transform:translateY(-3px) scale(1.03)}
-.waves{position:absolute;left:0;bottom:-1px;width:200%;height:110px;animation:slide 14s linear infinite}
-.waves.w2{animation-duration:22s;animation-direction:reverse;opacity:.6;height:90px}
-@keyframes slide{to{transform:translateX(-50%)}}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1rem;margin-top:-4.5rem;position:relative}
-.stat{border-radius:16px;padding:1.2rem;color:#fff;text-align:center}
-.stat strong{display:block;font:700 2rem Georgia,serif}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.1rem}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.3rem;transition:transform .3s,box-shadow .3s}
-.card:hover{transform:translateY(-6px);box-shadow:0 12px 28px #0b3c5d26}
-.card h3{font-size:1.25rem;color:var(--a1)}
+:root{
+--bg:#f3f8fb;
+--card:#fff;
+--ink:#0b2a3c;
+--mut:#4d6b7d;
+--a1:#1d6f9f;
+--a2:#2fa4a0;
+--a3:#e9a23b;
+--a5:#c8553d;
+--dk:#0b3c5d;
+--line:#d5e3ec;
+box-sizing:border-box;
+padding-top:env(safe-area-inset-top,0px);
+padding-bottom:env(safe-area-inset-bottom,0px)
+}
+
+@media (prefers-color-scheme:dark){
+:root:not([data-theme="light"]){
+--bg:#08202e;
+--card:#0f3146;
+--ink:#e8f2f7;
+--mut:#9ab6c6;
+--line:#1b4660;
+--dk:#051a27
+}
+}
+
+:root[data-theme="dark"]{
+--bg:#08202e;
+--card:#0f3146;
+--ink:#e8f2f7;
+--mut:#9ab6c6;
+--line:#1b4660;
+--dk:#051a27
+}
+
+html{
+scroll-padding-top:env(safe-area-inset-top,0px)
+}
+
+*{
+box-sizing:border-box
+}
+
+body{
+margin:0;
+background:var(--bg);
+color:var(--ink);
+font:17px/1.6 system-ui,-apple-system,"Segoe UI",Calibri,sans-serif
+}
+
+h1,h2,h3{
+font-family:Georgia,"Times New Roman",serif;
+line-height:1.15;
+margin:0 0 .5em
+}
+
+nav{
+position:sticky;
+top:env(safe-area-inset-top,0px);
+z-index:10;
+display:flex;
+gap:.25rem;
+align-items:center;
+padding:.6rem 1rem;
+background:var(--dk);
+overflow-x:auto;
+white-space:nowrap
+}
+
+nav b{
+color:#fff;
+font-family:Georgia,serif;
+margin-right:auto;
+padding-right:1rem
+}
+
+nav a{
+color:#cfe3ee;
+text-decoration:none;
+padding:.4rem .8rem;
+border-radius:99px;
+font-size:.95rem;
+transition:.25s
+}
+
+nav a:hover{
+background:#ffffff22
+}
+
+nav a[aria-current]{
+background:var(--a2);
+color:#fff
+}
+
+.page{
+animation:in .6s ease both
+}
+
+@keyframes in{
+from{
+opacity:0;
+transform:translateY(16px)
+}
+to{
+opacity:1;
+transform:none
+}
+}
+
+.wrap{
+max-width:1000px;
+margin:0 auto;
+padding:2.5rem 1.25rem
+}
+
+.hero{
+position:relative;
+background:linear-gradient(#0b3c5d,#1d6f9f);
+color:#fff;
+text-align:center;
+padding:5rem 1.25rem 9rem;
+overflow:hidden
+}
+
+.hero h1{
+font-size:clamp(2.8rem,9vw,5.5rem);
+margin:0
+}
+
+.hero p{
+font-size:1.25rem;
+max-width:34rem;
+margin:.5rem auto 1.5rem;
+color:#d8eaf3
+}
+
+.btn{
+display:inline-block;
+background:var(--a3);
+color:#1b1200;
+border:0;
+padding:.8rem 1.6rem;
+border-radius:99px;
+font:600 1rem system-ui;
+text-decoration:none;
+cursor:pointer;
+transition:transform .2s
+}
+
+.btn:hover{
+transform:translateY(-3px) scale(1.03)
+}
+
+.waves{
+position:absolute;
+left:0;
+bottom:-1px;
+width:200%;
+height:110px;
+animation:slide 14s linear infinite
+}
+
+.waves.w2{
+animation-duration:22s;
+animation-direction:reverse;
+opacity:.6;
+height:90px
+}
+
+@keyframes slide{
+to{
+transform:translateX(-50%)
+}
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+gap:1rem;
+margin-top:-4.5rem;
+position:relative
+}
+
+.stat{
+border-radius:16px;
+padding:1.2rem;
+color:#fff;
+text-align:center
+}
+
+.stat strong{
+display:block;
+font:700 2rem Georgia,serif
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:1.1rem
+}
+
+.card{
+background:var(--card);
+border:1px solid var(--line);
+border-radius:16px;
+padding:1.3rem;
+transition:transform .3s,box-shadow .3s
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 28px #0b3c5d26
+}
+
+.card h3{
+font-size:1.25rem;
+color:var(--a1)
+}
+
+.ico{
+font-size:2.6rem;
+display:block;
+margin-bottom:.3rem;
+animation:bob 3.5s ease-in-out infinite
+}
+
+@keyframes bob{
+50%{
+transform:translateY(-6px)
+}
+}
+
+a.card{
+color:inherit;
+text-decoration:none;
+display:block
+}
+
+.rv{
+opacity:0;
+transform:translateY(28px);
+transition:opacity .7s,transform .7s
+}
+
+.rv.in{
+opacity:1;
+transform:none
+}
+
+h2{
+font-size:clamp(1.8rem,5vw,2.6rem);
+color:var(--a1)
+}
+
+.lead{
+color:var(--mut);
+max-width:40rem
+}
+
+.scene{
+background:var(--card);
+border:1px solid var(--line);
+border-radius:20px;
+padding:1rem;
+margin:1.5rem 0
+}
+
+.scene svg{
+width:100%;
+height:auto;
+display:block;
+border-radius:12px
+}
+
+input[type=range]{
+width:100%;
+accent-color:var(--a2);
+margin:.8rem 0
+}
+
+.tag{
+display:inline-block;
+background:var(--a2);
+color:#fff;
+border-radius:99px;
+padding:.2rem .8rem;
+font-size:.9rem
+}
+
+.time{
+display:grid;
+gap:1rem;
+border-left:4px solid var(--a2);
+padding-left:1.2rem;
+margin:1.5rem 0
+}
+
+.time div b{
+color:var(--a1)
+}
+
+.warn{
+background:var(--a5);
+color:#fff;
+border-radius:14px;
+padding:1rem 1.3rem;
+margin:1.5rem 0
+}
+
+.quiz button{
+display:block;
+width:100%;
+text-align:left;
+margin:.4rem 0;
+padding:.7rem 1rem;
+border-radius:12px;
+border:1px solid var(--line);
+background:var(--card);
+color:var(--ink);
+font:inherit;
+cursor:pointer;
+transition:.2s
+}
+
+.quiz button:hover{
+border-color:var(--a2)
+}
+
+.ok{
+background:var(--a2)!important;
+color:#fff!important
+}
+
+.no{
+background:var(--a5)!important;
+color:#fff!important
+}
+
+.ph{
+aspect-ratio:16/7;
+margin:1.5rem 0;
+border:2px dashed var(--a1);
+border-radius:16px;
+display:grid;
+place-items:center;
+text-align:center;
+color:var(--mut);
+padding:1rem;
+background:var(--card)
+}
+
+.ph img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:14px
+}
+
+.chips{
+display:flex;
+flex-wrap:wrap;
+gap:.5rem;
+margin:1.2rem 0
+}
+
+.chips button{
+border:1px solid var(--line);
+background:var(--card);
+color:var(--ink);
+padding:.4rem .9rem;
+border-radius:99px;
+font:inherit;
+font-size:.95rem;
+cursor:pointer;
+transition:.2s
+}
+
+.chips button[aria-pressed=true]{
+background:var(--a1);
+color:#fff;
+border-color:var(--a1)
+}
+
+.city small{
+color:var(--mut)
+}
+
+.city .c{
+font-size:1.6rem
+}
+
+footer{
+text-align:center;
+color:var(--mut);
+padding:2rem 1rem;
+font-size:.9rem
+}
+
+@media (prefers-reduced-motion:reduce){
+*{
+animation:none!important;
+transition:none!important
+}
+
+.rv{
+opacity:1;
+transform:none
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<b>🌊 Die Nordsee</b>
+<a href="#/start">Start</a>
+<a href="#/gezeiten">Gezeiten</a>
+<a href="#/natur">Natur</a>
+<a href="#/staedte">Städte</a>
+<a href="#/mensch">Menschen</a>
+<a href="#/zukunft">Zukunft</a>
+</nav>
+
+
+<section class="page" id="p-start">
+
+<div class="hero">
+
+<h1>Die Nordsee</h1>
+
+<p>
+Zwischen Ebbe und Flut: Natur, Menschen und Zukunft eines besonderen Meeres.
+</p>
+
+<a class="btn" href="#/gezeiten">Entdecken ↓</a>
+
+<svg class="waves w2" viewBox="0 0 1200 100" preserveAspectRatio="none">
+<path d="M0 50 Q150 10 300 50 T600 50 T900 50 T1200 50 V100 H0Z" fill="#2fa4a0"/>
+</svg>
+
+<svg class="waves" viewBox="0 0 1200 100" preserveAspectRatio="none">
+<path d="M0 60 Q150 20 300 60 T600 60 T900 60 T1200 60 V100 H0Z" fill="#f3f8fb"/>
+</svg>
+
+</div>
+
+
+<div class="wrap">
+
+<div class="stats">
+
+<div class="stat" style="background:var(--a1)">
+<strong data-n="575000">0</strong>
+km² Fläche (ca.)
+</div>
+
+<div class="stat" style="background:var(--a2)">
+<strong data-n="94">0</strong>
+m durchschnittliche Tiefe
+</div>
+
+<div class="stat" style="background:#5b8db8">
+<strong data-n="700">0</strong>
+m tiefste Stelle (ca.)
+</div>
+
+<div class="stat" style="background:var(--a3);color:#1b1200">
+<strong data-n="7">0</strong>
+Anrainerstaaten
+</div>
+
+</div>
+
+
+<h2 class="rv" style="margin-top:3rem">
+Wo liegt die Nordsee?
+</h2>
+
+<p class="lead rv">
+Die Nordsee ist ein Randmeer des Atlantiks. Sieben Länder liegen an ihrer Küste: Norwegen, Dänemark, Deutschland, die Niederlande, Belgien, Frankreich und Großbritannien. Das Wasser ist salzig (ca. 3,5 %) und relativ flach, deshalb sind die Gezeiten hier so stark.
+</p>
+
+
+<figure class="ph rv">
+<img src="startimage.jpeg" alt="Küste der Nordsee">
+</figure>
+
+
+<div class="grid" style="margin-top:2rem">
+
+<a class="card rv" href="#/gezeiten">
+<span class="ico">🌗</span>
+<h3>Gezeiten</h3>
+Wie entstehen Ebbe und Flut? Probiere es selbst aus.
+</a>
+
+<a class="card rv" href="#/natur">
+<span class="ico">🦭</span>
+<h3>Natur</h3>
+Wattenmeer, Robben, Wale und Zugvögel.
+</a>
+
+<a class="card rv" href="#/staedte">
+<span class="ico">🏙️</span>
+<h3>Städte</h3>
+Die wichtigsten deutschen Städte und Häfen an der Nordsee.
+</a>
+
+<a class="card rv" href="#/mensch">
+<span class="ico">⚓</span>
+<h3>Menschen</h3>
+Inseln, Häfen, Fischerei und Windkraft.
+</a>
+
+<a class="card rv" href="#/zukunft">
+<span class="ico">🌍</span>
+<h3>Zukunft</h3>
+Probleme, Schutz und ein kleines Quiz.
+</a>
+
+</div>
+
+</div>
+</section>
+
+
+
+<section class="page" id="p-gezeiten" hidden>
+
+<div class="wrap">
+
+<h2 class="rv">Gezeiten: Ebbe und Flut</h2>
+
+<p class="lead rv">
+Die Anziehungskraft des Mondes zieht das Wasser an: Es kommt die Flut (Hochwasser). Danach fließt das Wasser ab: Ebbe. Alle ca. 12 Stunden und 25 Minuten kommt das Hochwasser.
+</p>
+
+
+<div class="scene rv">
+
+<svg viewBox="0 0 600 300" role="img" aria-label="Boot bei Ebbe und Flut">
+
+<rect width="600" height="300" fill="#bfe3f3"/>
+
+<circle cx="520" cy="55" r="26" fill="#fff6c8"/>
+
+<path d="M0 215 Q150 190 300 215 T600 205 V300 H0Z" fill="#e6c98b"/>
+
+<g id="boat">
+<path d="M215 0h90l-14 26h-62z" fill="#c8553d"/>
+<rect x="258" y="-48" width="4" height="48" fill="#444"/>
+<path d="M262 -46l32 28h-32z" fill="#fff"/>
+</g>
+
+<rect id="water" x="0" width="600" fill="#1d6f9f" opacity=".72"/>
+
+</svg>
+
+
+<input id="tide" type="range" min="0" max="100" value="80" aria-label="Wasserstand">
+
+<span class="tag" id="tl">Flut</span>
+
+</div>
+
+
+<div class="time">
+
+<div class="rv">
+<b>1 · Flut</b><br>
+Der Wasserstand steigt: Hochwasser.
+</div>
+
+<div class="rv">
+<b>2 · Ebbe</b><br>
+Das Wasser fließt ab, der Meeresboden wird sichtbar: das Watt.
+</div>
+
+<div class="rv">
+<b>3 · Tidenhub</b><br>
+Der Unterschied zwischen Hoch- und Niedrigwasser: ca. 2 bis 4 Meter.
+</div>
+
+<div class="rv">
+<b>Priel</b><br>
+Ein kleiner Wasserlauf im Watt, der auch bei Ebbe Wasser führt.
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+
+<section class="page" id="p-natur" hidden>
+
+<div class="wrap">
+
+<h2 class="rv">Das Wattenmeer</h2>
+
+<p class="lead rv">
+Das größte zusammenhängende Sand- und Schlickwattgebiet der Welt, ca. 500 km lang.
+</p>
+
+
+<div class="time">
+
+<div class="rv">
+<b>2009</b><br>
+UNESCO-Weltnaturerbe (Deutschland und Niederlande).
+</div>
+
+<div class="rv">
+<b>2014</b><br>
+Auch das dänische Wattenmeer wird aufgenommen.
+</div>
+
+</div>
+
+
+<div class="warn rv">
+⚠️ Wattwanderung nur mit Wattführer: Die Flut kommt schnell!
+</div>
+
+
+<figure class="ph rv">
+<img src="natur.jpg" alt="Wattenmeer bei Ebbe">
+</figure>
+
+
+<h2 class="rv" style="margin-top:2.5rem">
+Tiere der Nordsee
+</h2>
+
+
+<div class="grid">
+
+<div class="card rv">
+<span class="ico">🦭</span>
+<h3>Seehund</h3>
+Kleiner, runder Kopf. Ruht bei Ebbe auf den Sandbänken.
+</div>
+
+<div class="card rv">
+<span class="ico">🦭</span>
+<h3>Kegelrobbe</h3>
+Größtes Raubtier Deutschlands, bis ca. 300 kg.
+</div>
+
+<div class="card rv">
+<span class="ico">🐬</span>
+<h3>Schweinswal</h3>
+Kleiner Wal (ca. 1,5 m), in der Nordsee heimisch.
+</div>
+
+<div class="card rv">
+<span class="ico">🐦</span>
+<h3>Vögel</h3>
+Austernfischer, Silbermöwe, Eiderente. Millionen Zugvögel rasten hier.
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+
+<section class="page" id="p-staedte" hidden>
+
+<div class="wrap">
+
+<h2 class="rv">
+Wichtige Städte an der deutschen Nordseeküste
+</h2>
+
+<p class="lead rv">
+Viele große Häfen liegen an Flussmündungen, nicht direkt am offenen Meer, zum Beispiel Hamburg an der Elbe.
+</p>
+
+
+<figure class="ph rv">
+<img src="hamburg.jpeg" alt="Hafen von Hamburg">
+</figure>
+
+
+<div class="grid">
+
+<div class="card city rv">
+<span class="c">🇩🇪</span>
+<h3>Hamburg</h3>
+Größter deutscher Hafen, an der Elbe, ca. 100 km vom Meer entfernt.
+</div>
+
+<div class="card city rv">
+<span class="c">🇩🇪</span>
+<h3>Bremerhaven</h3>
+Containerhafen und Auswandererstadt an der Wesermündung.
+</div>
+
+<div class="card city rv">
+<span class="c">🇩🇪</span>
+<h3>Emden</h3>
+Seehafen an der Ems in Ostfriesland, bekannt für den Autoumschlag.
+</div>
+
+<div class="card city rv">
+<span class="c">🇩🇪</span>
+<h3>Husum</h3>
+„Graue Stadt am Meer“ in Nordfriesland.
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+
+<section class="page" id="p-mensch" hidden>
+
+<div class="wrap">
+
+<h2 class="rv">
+Inseln und Tourismus
+</h2>
+
+
+<figure class="ph rv">
+<img src="helgoland.jpg" alt="Helgoland">
+</figure>
+
+
+<div class="grid">
+
+<div class="card rv">
+<span class="ico">🏝️</span>
+<h3>Ostfriesische Inseln</h3>
+Borkum, Norderney, Juist, Langeoog. Viele sind autofrei.
+</div>
+
+<div class="card rv">
+<span class="ico">🏖️</span>
+<h3>Nordfriesische Inseln</h3>
+Sylt, Föhr, Amrum: Strände und Dünen.
+</div>
+
+<div class="card rv">
+<span class="ico">🗻</span>
+<h3>Helgoland</h3>
+Hochseeinsel mit rotem Felsen.
+</div>
+
+</div>
+
+
+<p class="lead rv">
+Typisch: Strandkorb, Leuchtturm und Fischbrötchen.
+</p>
+
+
+<h2 class="rv" style="margin-top:2.5rem">
+Wirtschaft und Energie
+</h2>
+
+
+<div class="grid">
+
+<div class="card rv">
+<span class="ico">🚢</span>
+<h3>Schifffahrt</h3>
+Große Häfen: Rotterdam, Antwerpen, Hamburg.
+</div>
+
+<div class="card rv">
+<span class="ico">🐟</span>
+<h3>Fischerei</h3>
+Scholle, Hering und Nordseekrabben.
+</div>
+
+<div class="card rv">
+<span class="ico">🛢️</span>
+<h3>Öl und Gas</h3>
+Vor allem vor Norwegen und Großbritannien.
+</div>
+
+<div class="card rv">
+<span class="ico">💨</span>
+<h3>Windparks</h3>
+Offshore-Windenergie: die Energie der Zukunft.
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+
+<section class="page" id="p-zukunft" hidden>
+
+<div class="wrap">
+
+<h2 class="rv">
+Probleme und Schutz
+</h2>
+
+
+<div class="grid">
+
+<div class="card rv">
+<span class="ico">🥤</span>
+<h3 style="color:var(--a5)">Plastikmüll</h3>
+Müll schadet Vögeln, Fischen und Robben.
+</div>
+
+<div class="card rv">
+<span class="ico">🎣</span>
+<h3 style="color:var(--a5)">Überfischung</h3>
+Zu viel Fang: Fischbestände sinken.
+</div>
+
+<div class="card rv">
+<span class="ico">🌡️</span>
+<h3 style="color:var(--a5)">Klimawandel</h3>
+Der Meeresspiegel steigt, das Wasser wird wärmer.
+</div>
+
+<div class="card rv">
+<span class="ico">🛡️</span>
+<h3 style="color:var(--a2)">Schutz</h3>
+Nationalparks, Fangquoten, weniger Plastik, erneuerbare Energie.
+</div>
+
+</div>
+
+
+<h2 class="rv" style="margin-top:2.5rem">
+Quiz
+</h2>
+
+<div class="scene quiz rv" id="quiz"></div>
+
+
+<h2 class="rv" style="text-align:center">
+Was können wir für das Meer tun?
+</h2>
+
+</div>
+</section>
+
+
+
+<footer>
+Davide Paternoster · Diego A. Smantelli · Samuele Pinzi · Valerio Rigotti
+<br>
+3DS · ITT Buonarroti
+</footer>
+
+
+
+<script>
+
+const pages=[
+'start',
+'gezeiten',
+'natur',
+'staedte',
+'mensch',
+'zukunft'
+];
+
+
+const io=new IntersectionObserver(
+es=>es.forEach(e=>{
+if(e.isIntersecting){
+e.target.classList.add('in');
+io.unobserve(e.target)
+}
+}),
+{threshold:.15}
+);
+
+
+function count(){
+
+document.querySelectorAll('[data-n]').forEach(el=>{
+
+const n=+el.dataset.n;
+const t0=performance.now();
+
+(function f(t){
+
+const p=Math.min((t-t0)/1400,1);
+
+el.textContent=Math.round(
+n*(1-Math.pow(1-p,3))
+).toLocaleString('de-DE');
+
+if(p<1)
+requestAnimationFrame(f)
+
+})(t0)
+
+})
+
+}
+
+
+function go(){
+
+let h=(location.hash||'#/start').slice(2);
+
+if(!pages.includes(h))
+h='start';
+
+
+pages.forEach(p=>
+document.getElementById('p-'+p).hidden=p!==h
+);
+
+
+document.querySelectorAll('nav a').forEach(a=>
+
+a.getAttribute('href')==='#/'+h
+?
+a.setAttribute('aria-current','page')
+:
+a.removeAttribute('aria-current')
+
+);
+
+
+window.scrollTo(0,0);
+
+
+document
+.querySelectorAll('#p-'+h+' .rv')
+.forEach(e=>{
+e.classList.remove('in');
+io.observe(e)
+});
+
+
+if(h==='start')
+count()
+
+}
+
+
+window.addEventListener('hashchange',go);
+
+go();
+
+
+
+const tide=document.getElementById('tide');
+
+
+function setTide(){
+
+const L=+tide.value;
+const y=215-L*1.15;
+
+const w=document.getElementById('water');
+
+w.setAttribute('y',y);
+w.setAttribute('height',300-y);
+
+document
+.getElementById('boat')
+.setAttribute(
+'transform',
+'translate(0,'+(Math.min(y,205)-6)+')'
+);
+
+
+document.getElementById('tl').textContent=
+L<30
+?
+'Ebbe: das Watt wird sichtbar'
+:
+L>70
+?
+'Flut: Hochwasser'
+:
+'Das Wasser steigt oder fällt'
+
+}
+
+
+tide.addEventListener('input',setTide);
+
+setTide();
+
+
+
+const Q=[
+
+[
+'Was zieht das Wasser bei der Flut an?',
+[
+'Der Mond',
+'Der Wind',
+'Die Sonne allein'
+],
+0
+],
+
+[
+'Seit wann ist das deutsche Wattenmeer Weltnaturerbe?',
+[
+'1999',
+'2009',
+'2019'
+],
+1
+],
+
+[
+'Wie viele Anrainerstaaten hat die Nordsee?',
+[
+'5',
+'7',
+'9'
+],
+1
+]
+
+];
+
+
+let qi=0;
+let sc=0;
+
+const qz=document.getElementById('quiz');
+
+
+function showQ(){
+
+if(qi>=Q.length){
+
+qz.innerHTML=
+'<h3>Ergebnis: '+sc+' von '+Q.length+' 🎉</h3>'+
+'<button onclick="qi=0;sc=0;showQ()">Nochmal</button>';
+
+return
+
+}
+
+
+const q=Q[qi];
+
+
+qz.innerHTML=
+'<h3>'+q[0]+'</h3>'+
+q[1]
+.map(
+(o,i)=>
+'<button data-i="'+i+'">'+o+'</button>'
+)
+.join('');
+
+
+qz
+.querySelectorAll('button')
+.forEach(
+b=>
+
+b.onclick=()=>{
+
+const i=+b.dataset.i;
+
+b.classList.add(
+i===q[2]
+?
+'ok'
+:
+'no'
+);
+
+if(i===q[2])
+sc++;
+
+
+qz
+.querySelectorAll('button')
+.forEach(x=>
+x.disabled=true
+);
+
+
+setTimeout(
+()=>{
+qi++;
+showQ()
+},
+1000
+)
+
+}
+
+)
+
+}
+
+
+showQ();
+
+</script>
+
+</body>
+</html>.card h3{font-size:1.25rem;color:var(--a1)}
 .ico{font-size:2.6rem;display:block;margin-bottom:.3rem;animation:bob 3.5s ease-in-out infinite}
 @keyframes bob{50%{transform:translateY(-6px)}}
 a.card{color:inherit;text-decoration:none;display:block}
