@@ -71,7 +71,7 @@ footer{text-align:center;color:var(--mut);padding:2rem 1rem;font-size:.9rem}
 <a href="#/gezeiten">Gezeiten</a>
 <a href="#/natur">Natur</a>
 <a href="#/staedte">Städte</a>
-<a href="#/mensch">Menschen</a>
+<a href="#/wirtschaft">Wirtschaft</a>
 <a href="#/zukunft">Zukunft</a>
 </nav>
 
@@ -143,10 +143,10 @@ Wattenmeer, Robben, Wale und Zugvögel.
 Die wichtigsten deutschen Städte und Häfen an der Nordsee.
 </a>
 
-<a class="card rv" href="#/mensch">
+<a class="card rv" href="#/wirtschaft">
 <span class="ico">⚓</span>
-<h3>Menschen</h3>
-Inseln, Häfen, Fischerei und Windkraft.
+<h3>Wirtschaft</h3>
+Häfen, Fischerei, Tourismus und Windkraft.
 </a>
 
 <a class="card rv" href="#/zukunft">
@@ -334,11 +334,17 @@ Seehafen an der Ems in Ostfriesland, bekannt für den Autoumschlag.
 </section>
 
 
-<section class="page" id="p-mensch" hidden>
+<section class="page" id="p-wirtschaft" hidden>
 
 <div class="wrap">
 
-<h2 class="rv">Inseln und Tourismus</h2>
+<h2 class="rv">Wirtschaft</h2>
+
+<p class="lead rv">
+Tourismus, Schifffahrt, Fischerei und Energie: Die Nordsee ist ein wichtiger Wirtschaftsraum.
+</p>
+
+<h3 class="rv" style="color:var(--a1)">Inseln und Tourismus</h3>
 
 <figure class="ph rv">
 <img src="helgoland.jpg" alt="Helgoland">
@@ -370,9 +376,9 @@ Hochseeinsel mit rotem Felsen.
 Typisch: Strandkorb, Leuchtturm und Fischbrötchen.
 </p>
 
-<h2 class="rv" style="margin-top:2.5rem">
+<h3 class="rv" style="color:var(--a1);margin-top:2.5rem">
 Wirtschaft und Energie
-</h2>
+</h3>
 
 <div class="grid">
 
@@ -459,7 +465,7 @@ Davide Paternoster · Diego A. Smantelli · Samuele Pinzi · Valerio Rigotti<br>
 
 <script>
 
-const pages=['start','gezeiten','natur','staedte','mensch','zukunft'];
+const pages=['start','gezeiten','natur','staedte','wirtschaft','zukunft'];
 
 const io=new IntersectionObserver(
 es=>es.forEach(e=>{
