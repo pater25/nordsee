@@ -73,6 +73,7 @@ footer{text-align:center;color:var(--mut);padding:2rem 1rem;font-size:.9rem}
 <a href="#/staedte">Städte</a>
 <a href="#/wirtschaft">Wirtschaft</a>
 <a href="#/zukunft">Zukunft</a>
+<a href="#/quellen">Quellen</a>
 </nav>
 
 <section class="page" id="p-start">
@@ -153,6 +154,12 @@ Häfen, Fischerei, Tourismus und Windkraft.
 <span class="ico">🌍</span>
 <h3>Zukunft</h3>
 Probleme, Schutz und ein kleines Quiz.
+</a>
+
+<a class="card rv" href="#/quellen">
+<span class="ico">📚</span>
+<h3>Quellen</h3>
+Woher unsere Informationen stammen.
 </a>
 
 </div>
@@ -457,15 +464,50 @@ Was können wir für das Meer tun?
 </section>
 
 
+<section class="page" id="p-quellen" hidden>
+
+<div class="wrap">
+
+<h2 class="rv">Quellen</h2>
+
+<p class="lead rv">
+Diese Seiten haben wir für unser Projekt benutzt:
+</p>
+
+<div class="grid">
+
+<a class="card rv" href="https://de.wikipedia.org/wiki/Nordsee" target="_blank" rel="noopener noreferrer">
+<span class="ico">📖</span>
+<h3>Wikipedia – Nordsee</h3>
+Allgemeine Informationen zur Nordsee: Lage, Größe, Tiefe und Anrainerstaaten.
+</a>
+
+<a class="card rv" href="https://whc.unesco.org/en/list/1314/" target="_blank" rel="noopener noreferrer">
+<span class="ico">🌍</span>
+<h3>UNESCO – Wattenmeer</h3>
+Das Wattenmeer als UNESCO-Weltnaturerbe.
+</a>
+
+<a class="card rv" href="https://www.umweltbundesamt.de/daten/umweltindikatoren/indikator-kunststoffmuell-in-der-nordsee" target="_blank" rel="noopener noreferrer">
+<span class="ico">🥤</span>
+<h3>Umweltbundesamt – Plastikmüll in der Nordsee</h3>
+Daten und Fakten zum Kunststoffmüll in der Nordsee.
+</a>
+
+</div>
+</div>
+</section>
+
+
 <footer>
-Davide Paternoster · Diego A. Smantelli · Samuele Pinzi · Valerio Rigotti<br>
+Davide Paternoster · Diego A. Santelli · Samuele Pinzi · Valerio Rigotti<br>
 3DS · ITT Buonarroti
 </footer>
 
 
 <script>
 
-const pages=['start','gezeiten','natur','staedte','wirtschaft','zukunft'];
+const pages=['start','gezeiten','natur','staedte','wirtschaft','zukunft','quellen'];
 
 const io=new IntersectionObserver(
 es=>es.forEach(e=>{
